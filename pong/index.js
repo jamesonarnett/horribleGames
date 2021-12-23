@@ -2,9 +2,20 @@ const canvas = document.getElementById("pong");
 const context = canvas.getContext("2d");
 canvas.classList.add("center");
 
+const arrow = document.getElementById("arrow");
 const pauseButton = document.getElementById("pause");
 const resumeButton = document.getElementById("resume");
 const home = document.getElementById("home");
+const easyButton = document.getElementById("easy");
+const normalButton = document.getElementById("normal");
+const hardButton = document.getElementById("hard");
+
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
+
+setTimeout(() => {
+  arrow.classList.add("flash");
+}, 5000);
 
 let paused = false;
 
@@ -176,10 +187,6 @@ function game() {
   update();
   render();
 }
-
-let easyButton = document.getElementById("easy");
-let normalButton = document.getElementById("normal");
-let hardButton = document.getElementById("hard");
 
 easyButton.addEventListener("click", (event) => {
   let loop = (framePerSecond) => {
