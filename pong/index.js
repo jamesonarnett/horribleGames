@@ -2,6 +2,12 @@ const canvas = document.getElementById("pong");
 const context = canvas.getContext("2d");
 canvas.classList.add("center");
 
+const pauseButton = document.getElementById("pause");
+const resumeButton = document.getElementById("resume");
+const home = document.getElementById("home");
+
+let paused = false;
+
 let hit = new Audio();
 let wall = new Audio();
 let userScore = new Audio();
@@ -105,41 +111,43 @@ function collision(b, p) {
 }
 
 function update() {
-  if (ball.x - ball.radius < 0) {
-    computer.score++;
-    comScore.play();
-    resetBall();
-  } else if (ball.x + ball.radius > canvas.width) {
-    user.score++;
-    userScore.play();
-    resetBall();
-  }
+  if (!paused) {
+    if (ball.x - ball.radius < 0) {
+      computer.score++;
+      comScore.play();
+      resetBall();
+    } else if (ball.x + ball.radius > canvas.width) {
+      user.score++;
+      userScore.play();
+      resetBall();
+    }
 
-  ball.x += ball.velocityX;
-  ball.y += ball.velocityY;
+    ball.x += ball.velocityX;
+    ball.y += ball.velocityY;
 
-  // my first baby AI :')
-  computer.y += (ball.y - (computer.y + computer.height / 2)) * 0.05;
+    // my first baby AI :')
+    computer.y += (ball.y - (computer.y + computer.height / 2)) * 0.05;
 
-  if (ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) {
-    ball.velocityY = -ball.velocityY;
-    wall.play();
-  }
+    if (ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) {
+      ball.velocityY = -ball.velocityY;
+      wall.play();
+    }
 
-  let player = ball.x + ball.radius < canvas.width / 2 ? user : computer;
+    let player = ball.x + ball.radius < canvas.width / 2 ? user : computer;
 
-  if (collision(ball, player)) {
-    hit.play();
+    if (collision(ball, player)) {
+      hit.play();
 
-    let collidePoint = ball.y - (player.y + player.height / 2);
-    collidePoint = collidePoint / (player.height / 2);
+      let collidePoint = ball.y - (player.y + player.height / 2);
+      collidePoint = collidePoint / (player.height / 2);
 
-    let angleRad = (Math.PI / 4) * collidePoint;
-    let direction = ball.x + ball.radius < canvas.width / 2 ? 1 : -1;
-    ball.velocityX = direction * ball.speed * Math.cos(angleRad);
-    ball.velocityY = ball.speed * Math.sin(angleRad);
+      let angleRad = (Math.PI / 4) * collidePoint;
+      let direction = ball.x + ball.radius < canvas.width / 2 ? 1 : -1;
+      ball.velocityX = direction * ball.speed * Math.cos(angleRad);
+      ball.velocityY = ball.speed * Math.sin(angleRad);
 
-    ball.speed += 0.1;
+      ball.speed += 0.1;
+    }
   }
 }
 
@@ -169,6 +177,30 @@ function game() {
   render();
 }
 
-let framePerSecond = 50;
+let easyButton = document.getElementById("easy");
+let normalButton = document.getElementById("normal");
+let hardButton = document.getElementById("hard");
 
-let loop = setInterval(game, 1000 / framePerSecond);
+easyButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(game, 1000 / framePerSecond);
+  };
+
+  loop(50);
+});
+
+normalButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(game, 1000 / framePerSecond);
+  };
+
+  loop(100);
+});
+
+hardButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(game, 1000 / framePerSecond);
+  };
+
+  loop(200);
+});

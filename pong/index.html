@@ -5,11 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pong :)</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1 style="text-align: center">Pong :)</h1>
     <canvas id="pong" width="600" height="400"></canvas>
+    <div class="buttonBox">
+      <button id="pause" class="btn btn-dark btn-lg m-3" onclick="paused=true">
+        Pause
+      </button>
+      <button
+        id="resume"
+        class="btn btn-dark btn-lg m-3"
+        onclick="paused=false"
+      >
+        Start
+      </button>
+      <span class="break"><br /></span>
+      <button id="easy" class="btn btn-dark btn-lg m-3">Easy</button>
+      <button id="normal" class="btn btn-dark btn-lg m-3">Normal</button>
+      <button id="hard" class="btn btn-dark btn-lg m-3">Ridiculous</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
