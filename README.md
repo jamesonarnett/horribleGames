@@ -8,3 +8,6 @@ A mosh posh game jam... ReImagines worse than ever. All in the name of practice.
 # SNAKE
 
 ![Alt text](snake/snakegame.png?raw=true "Optional Title")
+
+# FlappyBird
+![Alt text](flappyBird/antiGravityBird.png?raw=true "Optional Title")
