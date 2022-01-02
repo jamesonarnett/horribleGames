@@ -11,4 +11,6 @@ A mosh posh game jam... ReImagines worse than ever. All in the name of practice.
 # FlappyBird
 <img src="/flappyBird/antiGravityBird.png" width="500" height="400">
 
+# Jeopardy
+<img src="/jeopardy/jeopardyImg.png" width="500" height="400" />
 
