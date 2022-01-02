@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeopardy Jam</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topHeader">
+        <h1>Jeopardy :)</h1>
+        <p class="score">Score <span class="scoreCount"></span></p>
+      </header>
+
+
+      <div class="board">
+       
+      </div>
+
+      <div class="cardModal">
+        <div class="cardModalInner">
+          <h2 class="clueText"></h2>
+          <form autocomplete="off">
+            <input name="user-answer" type="text" />
+            <button type="submit">Answer</button>
+          </form>
+          <div class="result">
+            <p class="resultSuccess">CORRECT</p>
+            <p class="resultFail">INCORRECT</p>
+            <p class="resultCorrectAnswer">
+              The correct answer is
+              <span class="resultCorrectAnswerText"
+              >/span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
