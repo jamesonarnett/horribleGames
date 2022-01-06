@@ -18,3 +18,5 @@ A mosh posh game jam... ReImagines worse than ever. All in the name of practice.
 # Jeopardy
 <img src="/jeopardy/jeopardyImg.png" width="700" height="400" />
 
+# Doodler
+<img src="/doodle/doodlerImg.png" width="400" height="400" />
