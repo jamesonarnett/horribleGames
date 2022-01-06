@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  background-color: grey;
+}
+
+h1 {
+  padding: 1rem;
+  font-weight: 900;
+}
+
+h3 {
+  color: white;
+  padding-bottom: 15px;
+  margin-left: 35px;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 600px;
+  padding-bottom: 50px;
+  padding-top: 25px;
+}
+
+.buttonBox {
+  background-color: black;
+  text-align: center;
+  margin-bottom: 12rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.arrow {
+  color: white;
+}
+
+.closingBox {
+  text-align: center;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+  background-color: #58565c;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  list-style-type: none;
+
+  border: black 1px solid;
+  width: 155px;
+  height: 155px;
+  padding-top: 30px;
+  margin: 0rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+.footerText {
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.icon {
+  font-size: 64px;
+}
+
+.flash {
+  animation: flash 2s 3;
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="blackjack-result"><span style="color: black">Black</span>Jack</h1>
+
+      <div class="flex-blackjack-row-1">
+        <table style="flex-grow: 3; margin-right: -3rem">
+          <tr>
+            <th style="font-size: 24px" id="win-header">Wins</th>
+            <th style="font-size: 24px" id="loss-header">Losses</th>
+            <th style="font-size: 24px" id="draw-header">Draws</th>
+          </tr>
+
+          <tr>
+            <td><span id="wins">0</span></td>
+            <td><span id="losses">0</span></td>
+            <td><span id="draws">0</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex-blackjack-row-2">
+        <div id="your-box">
+          <h2>You: <span id="your-blackjack-result"> 0</span></h2>
+        </div>
+
+        <div id="dealer-box">
+          <h2>Dealer: <span id="dealer-blackjack-result"> 0</span></h2>
+        </div>
+      </div>
+
+      <div class="flex-blackjack-row-3">
+        <div>
+          <button
+            style="padding-left: 2rem; padding-right: 2rem"
+            class="btn-lg btn-primary mr-2"
+            id="blackjack-hit-button"
+          >
+            Hit
+          </button>
+          <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">
+            Stand
+          </button>
+          <button
+            style="padding-left: 1rem; padding-right: 1rem"
+            class="btn-lg btn-danger mr-2"
+            id="blackjack-deal-button"
+          >
+            Deal
+          </button>
+          <button class="btn-lg btn-success mr-2" id="blackjack-reset-button">
+            Restart
+          </button>
+          <ol>
+            <li>Press HIT to begin game</li>
+            <li>Press STAND to go to the Dealers turn</li>
+            <li>Press DEAL to play the next hand</li>
+            <li>Press RESTART to restart the whole game</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

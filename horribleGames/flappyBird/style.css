@@ -1,0 +1,13 @@
+body {
+  background-color: grey;
+}
+
+.center {
+  text-align: center;
+}
+
+#bird {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+}
